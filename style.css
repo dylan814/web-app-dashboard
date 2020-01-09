@@ -166,7 +166,6 @@ text-align: center;
 display:flex;
 /* background-color: cadetblue; */
 justify-content: space-between;
-width: 
 
 }
 
@@ -177,7 +176,7 @@ width:
     padding: 15px 25px 15px 25px;
     margin-top:0px;
     margin-bottom:0px;
-    border-bottom-style:rounded;
+    /* border-bottom-style:rounded; */
 
 }
 
@@ -612,7 +611,7 @@ font-weight: bolder;
 font-size: medium;
 border-radius: 15px;
 width: 40%;
-margin: left 10px;
+margin-left: 10px;
 margin-right: 10px;
 float: right;
 
