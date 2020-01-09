@@ -42,7 +42,7 @@ header {
 
 display:flex;
 
-background-color: mediumpurple;
+background-color: #7477BF;
 justify-content: space-around;
 
 
@@ -78,7 +78,7 @@ right:0px;
 
 .verticalLine {
 
-border-left: 2px solid navy;
+border-left: 1px solid navy;
 margin-left:10px;
 
 }
@@ -88,8 +88,10 @@ header h1 {
 font-weight: normal;
 margin-left: -40px;
 color: whitesmoke;
+/* transition: color 1s; */
 
 }
+
 
 
 header h1 .tm {
@@ -114,9 +116,16 @@ padding-top: 10px;
 /* padding-bottom: 10px; */
 position: relative;
 /* border: 2px solid red; */
+transition: transform 0.5s;
 
 
 
+
+}
+
+.svg:hover {
+
+    transform: rotate(-25deg);
 
 }
 
@@ -140,7 +149,7 @@ height:50px;
 
 
 
-background-color: navy;
+background-color: #5a4fc9;
 text-align: center;
 /* margin: 0 auto; */
 
@@ -172,12 +181,6 @@ width:
 
 }
 
-.alert {
-
-
-    background-color: white;
-}
-
 
 .traffic {
 
@@ -205,8 +208,9 @@ width:
 
     width: 85%;
     padding: 20px 10px 20px 10px;
-    background-color: lightgray;
+    background-color: #f2f2f2;
     border-radius: 0 0 0 15px;
+    border: 1px solid lightgrey;
     
 
 
@@ -229,7 +233,7 @@ margin-left: 40%;
 /* display:block; */
 padding: 10px;
 margin: 20px auto;
-background-color: mediumpurple;
+background-color: #7477BF;
 width: 90%;
 border-radius: 15px;
 display:flex;
@@ -243,10 +247,11 @@ color: white;
 
 }
 
-.x {
+.alert-banner-close {
 
     color: white;
     font-weight: normal;
+    align-self: flex-end;
     
 }
 
@@ -331,7 +336,7 @@ width: 100%;
     border: 1px solid gray;
     border-radius: 15px;
     margin: 20px 20px;
-    background-color: lightgrey;
+    background-color: #f2f2f2;
 
 }
 
@@ -439,6 +444,12 @@ height:10%;
     padding-bottom: 10px;
 }
 
+.noBorder {
+
+border-bottom: none;
+
+}
+
 .members-text {
 
     margin-left: 5px;
@@ -517,7 +528,7 @@ select {
 .button-primary {
 
 height: 50px;
-background-color: mediumpurple;
+background-color: #7477BF;
 color:white;
 font-weight: bolder;
 font-size: medium;
@@ -538,7 +549,7 @@ margin-bottom: 10px;
 span.purple {
 
 
-    fill: mediumpurple;
+    fill: #7477BF;
 }
 
 .form-field {
@@ -569,7 +580,7 @@ span.purple {
 
    position : absolute;
    margin-left: 10px;
-   top: 50px;
+   top: 70px;
    /* margin-right: 20px; */
    
 }
@@ -578,7 +589,7 @@ span.purple {
 
     position : absolute;
     margin-left: 10px;
-    top: 90px;
+    top: 110px;
     /* margin-right: 20px; */
     
  }
@@ -615,6 +626,15 @@ main {
     grid-template-rows: auto;
 
 }
+
+
+.widget-container-full, .widget-container-half {
+
+    width : 95vw ;
+
+    }
+     
+ 
 
 
 
@@ -756,7 +776,94 @@ main {
                      /* margin-right: 20px; */
                      
                   }
+
+                  .main-header-search {
+
+                    width: 85%;
+                    padding-bottom: 35px;
+
+
+                  }
+
+
+                  input[type=search] {
+
+                    width: 25%;
+                    /* margin-right:auto; */
+                    margin-left:auto;
+                    position: absolute;
+                    right:10px;
+                    height: 30px;
+
+
+
+
+
+                  }
+
+                  .notifications img {
+
+                    /* display:block; */
+                    margin: 10px auto;
+                  }
+
+
+
+                .members {
+
+                 border-top: 1px solid grey;
+                 border-right: 1px solid grey;
+
+                }
+
+
+                .recent {
+
+                    border-top:1px solid grey;
+
+                }
+
+                .message {
+
+                    border-right: 1px solid grey;
+                    border-top: 1px solid grey;
+                }
+                  
+
+                .settings {
+
+
+                    border-top: 1px solid grey;
+                }
+
+
+                .widget-container-full {
+                    width : 95vw ;
+                    }
+                    .widget-container-half {
+
+                        width : 45vw ;
+                    }
                  
+
+                 .daily {
+
+
+                    border-top: 1px solid grey;
+                    border-right: 1px solid grey;
+                    border-bottom: 1px solid grey;
+                    margin-top:20px;
+                 }
+
+
+                 .mobile {
+
+                    border-top: 1px solid grey;
+                    border-bottom: 1px solid grey;
+                    padding-bottom: 20px;
+                    margin-top:20px;
+                 }
+                  
 
                
     }
