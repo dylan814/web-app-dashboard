@@ -13,6 +13,31 @@ padding:0;
 }
 
 
+.grid-container {
+    display : grid;
+    grid-template-columns : 100%;
+    grid-template-rows: auto;
+    grid-template-areas :
+    "header"
+    "navigation"
+    "main"
+    
+     ;
+    }
+    header {
+
+    grid-area : header;
+
+    }
+    nav {
+    grid-area : navigation;
+    }
+
+    main {
+
+    grid-area : main;
+    }
+
 header {
 
 display:flex;
@@ -34,7 +59,7 @@ margin-right: -20px;
 
 #notifications h3{
 
-font-weight: bold;
+font-weight: normal;
 color: white;
 
 }
@@ -47,8 +72,8 @@ background-color: lightgreen;
 border-radius: 50%;
 display: inline-block;
 position: absolute;
-top:10px;
-right:230px;
+top:0px;
+right:0px;
 }
 
 .verticalLine {
@@ -62,15 +87,33 @@ header h1 {
 
 font-weight: normal;
 margin-left: -40px;
+color: whitesmoke;
 
 }
 
+
+header h1 .tm {
+
+font-size: 8px;
+position: absolute;
+top: 23px;
+
+}
+
+header h1 .focus {
+
+font-weight: bold;
+
+}
 
 .svg {
 
 width:30px;
 height:30px;
-
+padding-top: 10px;
+/* padding-bottom: 10px; */
+position: relative;
+/* border: 2px solid red; */
 
 
 
@@ -97,9 +140,9 @@ height:50px;
 
 
 
-background-color: aqua;
+background-color: navy;
 text-align: center;
-margin: 0 auto;
+/* margin: 0 auto; */
 
 
 }
@@ -162,16 +205,22 @@ width:
 
     width: 85%;
     padding: 20px 10px 20px 10px;
-    background-color: mediumpurple;
+    background-color: lightgray;
+    border-radius: 0 0 0 15px;
+    
 
 
 }
 
 input[type=search] {
 
-width: 100%;
-height: 50px;
-border-radius: 15px;
+width: 60%;
+height: 30px;
+border-radius: 5px;
+margin-left: 40%;
+/* position: absolute; */
+/* right: 10px; */
+/* top: 10px; */
 
 }
 
@@ -181,8 +230,533 @@ border-radius: 15px;
 padding: 10px;
 margin: 20px auto;
 background-color: mediumpurple;
-width: 80%;
-border-radius: 20px;
+width: 90%;
+border-radius: 15px;
+display:flex;
+justify-content: space-between;
+
+}
+
+.alert_text {
+
+color: white;
+
+}
+
+.x {
+
+    color: white;
+    font-weight: normal;
+    
+}
+
+
+
+
+
+h3 {
+
+
+    font-size: large;
+    font-weight: bold;
+    padding: 10px;
+    align-self: center;
+}
+
+.traffic-header {
+
+display:flex;
+justify-content: space-between;
+position: relative;
 
 
 }
+
+.traffic-nav {
+
+    display:flex;
+    list-style-type: none;
+    align-items: center;
+
+
+}
+
+
+.traffic-nav li {
+
+padding-left: 10px;
+padding-right: 10px;
+
+}
+
+
+.active {
+
+/* padding: 10px; */
+background-color: green;
+border-radius: 15px;
+color:white;
+padding-top:5px;
+padding-bottom:5px;
+
+
+}
+
+
+
+.traffic img {
+
+width: 100%;
+
+}
+
+.daily img {
+
+width: 100%;
+
+}
+
+.mobile img {
+
+width: 100%;
+
+}
+
+
+.social-container {
+
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin: 20px 20px;
+    background-color: lightgrey;
+
+}
+
+
+.social-image {
+
+margin-right: 50px;
+border-radius: 50%;
+border: 1px solid black;
+width: 70px;
+height:70px;
+position:relative;
+background-color: lightgrey;
+
+}
+
+.twitter-image {
+
+    margin-right: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 70px;
+    height:70px;
+    position:relative;
+    background-color: #1DA1F2;
+    
+    }
+
+
+    .facebook-image {
+        
+    margin-right: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 70px;
+    height:70px;
+    position:relative;
+    background-color: #4267B2
+
+    }
+
+
+    .google-image {
+
+    margin-right: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 70px;
+    height:70px;
+    position:relative;
+    background-color: #dd4b39
+
+    }
+
+
+.social-text p {
+
+font-size: 20px;
+font-weight: bold;
+
+}
+
+p.social-number {
+
+font-weight:normal;
+font-size: 40px;
+margin-top:0;
+
+
+}
+
+
+
+.svg2 {
+
+    width:40px;
+    height:50px;
+    padding: 5px;
+    position: absolute;
+    top:10px;
+    left: 10px;
+     
+    
+    }
+
+
+img.profile-image {
+
+border-radius: 50%;
+width:10%;
+height:10%;
+
+
+}
+
+
+.members-container {
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid lightgrey;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-bottom: 10px;
+}
+
+.members-text {
+
+    margin-left: 5px;
+    margin-right: auto;
+
+}
+
+.members-text p {
+
+margin-bottom: 0;
+
+}
+
+p.hours-ago {
+
+margin-top:0;
+
+}
+
+p.arrow {
+
+font-size: 20px;
+transform: scale(2);
+font-weight: normal;
+
+}
+
+
+form {
+
+    display:flex;
+    flex-direction: column;
+    /* margin: 10px 15px 10px 15px; */
+    border-radius: 25px;
+
+
+}
+
+input[type=text] {
+
+    
+    height: 35px;
+    border-radius:5px;
+    width:90%;
+    
+
+
+
+}
+
+textarea {
+
+height: 150px;
+margin-bottom: 15px;
+border-radius: 10px;
+width:90%;
+margin: 20px auto;
+
+
+
+}
+
+select {
+    width: 268px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 5px;
+    height: 34px;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right lightgray;
+    -webkit-appearance: none;
+    background-position: right;
+}
+
+.button-primary {
+
+height: 50px;
+background-color: mediumpurple;
+color:white;
+font-weight: bolder;
+font-size: medium;
+border-radius: 15px;
+width: 90%;
+margin: 0 auto;
+
+
+}
+
+.switch-light {
+
+width:20%;
+margin-bottom: 10px;
+
+}
+
+span.purple {
+
+
+    fill: mediumpurple;
+}
+
+.form-field {
+
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    height: 35px;
+    /* padding-bottom: 20px; */
+    margin-top:20px;
+    margin-bottom: 20px;
+    border-radius:5px;
+}
+
+.switch-ios {
+
+    margin-left: 220px;
+}
+
+.settings {
+
+    position: relative;
+
+
+}
+
+.one {
+
+   position : absolute;
+   margin-left: 10px;
+   top: 50px;
+   /* margin-right: 20px; */
+   
+}
+
+.two {
+
+    position : absolute;
+    margin-left: 10px;
+    top: 90px;
+    /* margin-right: 20px; */
+    
+ }
+
+ #save {
+
+width: 40%;
+margin-left: 10px;
+
+ }
+
+
+
+ #cancel {
+
+height: 50px;
+background-color: gray;
+color:white;
+font-weight: bolder;
+font-size: medium;
+border-radius: 15px;
+width: 40%;
+margin: left 10px;
+margin-right: 10px;
+float: right;
+
+}
+
+
+main {
+
+
+    display:grid;
+    grid-template-rows: auto;
+
+}
+
+
+
+@media (min-width: 768px ) {
+
+    .grid-container {
+    grid-template-columns : 55px 1fr;
+    grid-template-areas :
+    "header header"
+    "navigation main" ;
+    }
+
+        header {
+
+        grid-area : header;
+    
+        }
+        nav {
+        grid-area : navigation;
+        }
+    
+        main {
+    
+        grid-area : main;
+        }
+
+
+        main {
+
+
+            grid-template-columns: 50%;
+        }
+
+        .main-header {
+
+            grid-column: 1 /span 2;
+        }
+
+        .alert {
+
+            grid-column: 1/span 2;
+        }
+
+        .social {
+
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+
+        
+        .social-container {
+
+        /* margin: 0; */
+
+        grid-column: span 1;
+
+        }
+
+        .traffic , .social {
+            grid-column : 1 / span 2 ;
+            
+        }
+
+
+        .daily , .members , .message {
+            grid-column : 1 / span 1 ;
+            }
+
+            .mobile , .recent , .settings {
+                grid-column : 2 / span 1 ;
+                }
+
+
+                .members-container {
+
+
+                    margin-top: 0;
+                }
+
+                .members-container p {
+
+                    margin-top: 0;
+                }
+
+                p.arrow {
+
+                    font-size: 20px;
+                    transform: scale(1.5);
+                }
+
+                header {
+
+
+                    justify-content: space-between;
+                }
+
+                header h1 {
+
+                    margin-left: 2%;
+                }
+
+                #notifications {
+
+                    margin-right: 1%;
+                }
+
+                section.settings {
+                     
+               display: flex;
+               flex-direction: column;
+
+                }
+
+                .settings-button {
+
+                    margin-top: auto;
+                }
+
+                #timezone {
+
+                    margin-top:auto;
+                }
+
+                .one {
+
+                    position : absolute;
+                
+                    top: 70px;
+                    /* margin-right: 20px; */
+                    
+                 }
+                 
+                 .two {
+                 
+                     position : absolute;
+                
+                     top: 110px;
+                     /* margin-right: 20px; */
+                     
+                  }
+                 
+
+               
+    }

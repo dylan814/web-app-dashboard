@@ -4,20 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="toggle-switch.css">
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
     <title>Web App dashboard</title>
   </head>
-  <body>
+  <body class="grid-container">
 
     <header class="header">
-        <h1>Your App</h1>
+        <h1> <span class="focus">Your</span><span>App</span><span class="tm">TM</span></h1>
         <!-- <div> The div contains the bell icon -->
 
             
         <div id="notifications">
          <!-- svg -->
          <div class="svg">
-         <?xml version="1.0" encod ing="utf-8"?>
+         <?xml version="1.0" encoding="utf-8"?>
          <!-- Generator: Adobe Ill ustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
          <svg  version="1.1" id="L ayer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 32 32" style ="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -30,9 +31,10 @@
 			 c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/>
          </g >
          </g >
+         <span class="dot"></span>
          </svg>
          </div>         <!-- div#notifications is a container element for our notifications -->
-         <span class="dot"></span>
+         
 
          <div class="verticalLine">
          <img src="images\member-2.jpg" class="dashboard-image" alt="Profile image">
@@ -92,7 +94,8 @@
         <!-- alert banner -->
         <div class="alert" id="alert" >
         <!-- JS will insert alert here -->
-        <span> Alert:  You have 6 overdue tasks to comeplete. </span>
+        <span class="alert_text"> Alert:  You have 6 overdue tasks to comeplete. </span>
+        <span class="x"> x </span>
         </div>
 
 
@@ -100,7 +103,7 @@
         <!-- line graph charts -->
         <section class="traffic">
             <div class="traffic-header">
-            <h3>Traffic</h3>
+            <h3>TRAFFIC</h3>
             <ul class="traffic-nav">
             <li class="traffic-nav-link">Hourly</li>
             <li class="traffic-nav-link">Daily</li>
@@ -111,19 +114,19 @@
             <div class="widget-container-full">
             <!-- element line graph will attach to -->
             <img src="images\line_graph.jpg" alt="line_graph">
-            <canvas id="traffic-chart"></canvas>
+            <!-- <canvas id="traffic-chart"></canvas> -->
             </div>
         </section>
 
 
         <!-- bar graph -->
         <section class="daily">
-            <h3>Daily Traffic</h3>
+            <h3>DAILY TRAFFIC</h3>
             <di v class="widget-container-half">
                 <!-- element bar graph will attach to -->
                 <img src="images\bar_graph.png" alt="bar_graph">
-                <canvas id="daily-chart"></canvas>
-            </di    v>
+                <!-- <canvas id="daily-chart"></canvas> -->
+            </div>
         </section>  
 
 
@@ -132,18 +135,21 @@
             <div class="widget-container-half">
                 <!-- element donut graph will attach to -->
                 <img src="images\donut_graph.png" alt="donut_graph">
-                <canvas id="mobile-chart"></canvas>
+                <!-- <canvas id="mobile-chart"></canvas> -->
             </div>
         </section>
 
-
+        <h3> SOCIAL STATS </h3>
+        <section class="social">
+     
         <div class="social-container">
-            <div class="social-image">
+           
+            <div class="twitter-image">
                 <?xml version="1.0" encoding="utf-8"?>
                 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                <svg class="svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg class="svg2" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-                <path fill="red" d="M32,3.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.8,0.8,24,0,22.2,0
+                <path fill="white" d="M32,3.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.8,0.8,24,0,22.2,0
                 c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5C10.3,7.8,5.5,5.2,2.2,1.2c-0.6,1-0.9,2.1-0.9,3.3c0,2.3,1.2,4.3,2.9,5.5
                 c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1
                 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,3,10.1,3c12.1,0,18.7-10,18.7-18.7
@@ -152,29 +158,29 @@
             </div>
             <div class="social-text">
                 <p>Twitter</p>
-                <p>10,345</p>
+                <p  class="social-number">10345</p>
             </div>
             </div>
             <!-- add two more social containers and child
             elements for other social media items -->
-            <div class="social-container2">
-                <div class="social-image">
-                    <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg class="svg" enable-background="new 0 0 56.693 56.693" height="56.693px" id="Layer_1" version="1.1" viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="green" d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/>
+            <div class="social-container">
+                <div class="facebook-image">
+                    <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg class="svg2" enable-background="new 0 0 56.693 56.693" height="56.693px" id="Layer_1" version="1.1" viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="white" d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/>
                     </svg>
                 </div>
                 <div class="social-text">
                     <p>Facebook</p>
-                    <p>8739</p>
+                    <p class="social-number" >8739</p>
                 </div>
                 </div>
 
-                <div class="social-container3">
-                    <div class="social-image">
+                <div class="social-container">
+                    <div class="google-image">
                         <?xml version="1.0" encoding="utf-8"?>
                             <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                            <svg class="svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            <svg class="svg2" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-                            <path fill="blue" d="M17.7,25.7c0-0.3,0-0.5-0.1-0.8c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.2-0.4-0.3-0.7c-0.2-0.2-0.3-0.4-0.4-0.6
+                            <path fill="white" d="M17.7,25.7c0-0.3,0-0.5-0.1-0.8c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.2-0.4-0.3-0.7c-0.2-0.2-0.3-0.4-0.4-0.6
                                 c-0.1-0.2-0.3-0.3-0.5-0.6c-0.2-0.2-0.4-0.4-0.5-0.5c-0.1-0.1-0.3-0.3-0.6-0.5c-0.3-0.2-0.5-0.4-0.6-0.4s-0.3-0.2-0.6-0.4
                                 c-0.3-0.2-0.5-0.4-0.6-0.4c-0.2,0-0.5,0-1,0c-0.7,0-1.4,0-2,0.1c-0.7,0.1-1.4,0.2-2.1,0.5c-0.7,0.2-1.3,0.5-1.9,0.9s-1,0.8-1.3,1.4
                                 c-0.3,0.6-0.5,1.3-0.5,2.1c0,0.9,0.2,1.7,0.7,2.3c0.5,0.7,1.1,1.2,1.8,1.6s1.5,0.7,2.3,0.9s1.6,0.3,2.4,0.3c0.8,0,1.5-0.1,2.2-0.2
@@ -195,22 +201,21 @@
                     </div>
                     <div class="social-text">
                         <p>Google+</p>
-                        <p>2530</p>
+                        <p class="social-number">2530</p>
                     </div>
                     </div>
             </div>
         </div>
 
-
+    </section>
 
         <!-- new members widget -->
     <section class="members">
 
-    <h3>New Members</h3>
+    <h3>NEW MEMBERS</h3>
 
     <div class="members-container">
-    <img src="images\member-1.jpg"
-    class="profile-image">
+    <img src="images\member-1.jpg" class="profile-image">
     <div class="members-text">
     <p>Victoria Chambers</p>
     <a href="#">victoria.chambers80@example.com</a>
@@ -261,52 +266,49 @@
 
     <section class="recent">
 
-        <h3>Recent Activity</h3>
+        <h3>RECENT ACTIVITY</h3>
 
         <div class="members-container">
         <img src="images\member-1.jpg"
         class="profile-image">
         <div class="members-text">
         <p>Victoria Chambers commented on YourApp's SEO tips</p>
-        <p>4 hours ago</p>
+        <p class="hours-ago">4 hours ago</p>
         </div>
-        <p>></p>
+        <p class="arrow">&rsaquo;</p>
         </div>
 
         <div class="members-container">
             <img src="images\member-2.jpg" class="profile-image">
             <div class="members-text">
             <p>Dale Byrd like the post Facebook's Changes for 2016</p>
-            <p>5 hours ago</p>
+            <p class="hours-ago">5 hours ago</p>
             </div>
-            <p>></p>
+            <p class="arrow">&rsaquo;</p>
         </div>
+
+        <!-- &RightAngleBracket; -->
 
         <div class="members-container">
             <img src="images\member-3.jpg"
             class="profile-image">
             <div class="members-text">
             <p>Dan Wood commented on Facebook's changes for 2016</p>
-            <p>3 hours ago</p>
+            <p class="hours-ago">3 hours ago</p>
             </div>
-            <p>></p>
+            <p class="arrow">&rsaquo;</p>
         </div>
 
 
         <div class="members-container">
-                <img src="images\member-3.jpg"
+                <img src="images\member-4.jpg"
                 class="profile-image">
                 <div class="members-text">
                 <p>Dan Oliver posted YourApp's SEO Tips</p>
-                <p>1 day ago</p>
+                <p class="hours-ago">1 day ago</p>
                 </div>
-                <p>></p>
+                <p class="arrow">&rsaquo;</p>
         </div>
-    
-    
-            
-    
-        
             
     
         </section>
@@ -315,30 +317,57 @@
 
         <!-- messaging widget -->
     <section class="message">
-        <h3>Message User</h3>
+        <h3>MESSAGE USER</h3>
         <form class="widget-container">
-        <input type="text" placeholder="Search for user"
-        class="form-field" id="userField">
+        <input type="text" placeholder="Search for user" class="form-field" id="userField">
         <textarea placeholder="Message for user" class="form-area"
         id= "messageField" ></textarea>
-        <button class="button-primary" id="send" >Send</button>
+        <button class="button-primary" id="send" >SEND</button>
         </form>
     </section>
 
 
     <!-- local settings widget -->
 <section class="settings">
-    <h3>Settings</h3>
-    <!-- custom CSS toggle code-->
-    <!-- custom CSS toggle code-->
+    <h3>SETTINGS</h3>
+    <p class="one"> Send Email Notifications</p>
+    <p class="two">Set Profile to Public</p>
+
+    <label class="switch-light switch-ios" onclick="">
+        <input type="checkbox">
+      
+        
+        <span>
+         <span>OFF</span>
+         <span>ON</span>
+          <a></a>
+        
+        </span>
+      </label>
+    
+
+    
+    <label class="switch-light switch-ios" onclick="">
+        <input type="checkbox">
+      
+        <!-- <strong> -->
+          <!-- Wireless -->
+        <!-- </strong> -->
+      
+        <span>
+          <span>OFF</span>
+          <span class="purple">ON</span>
+          <a></a>
+        </span>
+      </label>
     <select class="form-field" id="timezone">
     <option disabled selected>Select a Timezone</option>
     <option>Eastern</option>
     <!-- more options -->
     </select>
     <div class="settings-button" >
-    <button class="button-primary" id="save">Save</button>
-    <button class="button-disabled" id="cancel">Cancel</button>
+    <button class="button-primary" id="save">SAVE</button>
+    <button class="button-disabled" id="cancel">CANCEL</button>
     </div>
     </section>
 
