@@ -19,6 +19,7 @@ let trafficData = {
     datasets: [{
     data: [ 750 , 1250 , 1000 , 2000 , 1500 , 1750 , 1250 , 1850 , 2250 , 1500 ,
     2500 ],
+    lineTension: "0",
     backgroundColor: 'rgba(116, 119, 191, .3)' ,
     borderWidth: 1 ,
     }]

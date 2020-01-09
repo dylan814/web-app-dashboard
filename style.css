@@ -867,3 +867,234 @@ main {
 
                
     }
+
+
+    @media (min-width: 1023px) {
+
+        .grid-container {
+        grid-template-columns : 55px 1fr;
+        grid-template-areas :
+        "header header"
+        "navigation main" ;
+        }
+    
+            header {
+    
+            grid-area : header;
+        
+            }
+            nav {
+            grid-area : navigation;
+            }
+        
+            main {
+        
+            grid-area : main;
+            }
+    
+    
+            main {
+    
+    
+                grid-template-columns: 50%;
+            }
+    
+            .main-header {
+    
+                grid-column: 1 /span 2;
+            }
+    
+            .alert {
+    
+                grid-column: 1/span 2;
+            }
+    
+            .social {
+    
+                display:grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+    
+    
+            
+            .social-container {
+    
+            /* margin: 0; */
+    
+            grid-column: span 1;
+    
+            }
+    
+            .traffic , .social {
+                grid-column : 1 / span 2 ;
+                
+            }
+    
+    
+            .daily , .members , .message {
+                grid-column : 1 / span 1 ;
+                }
+    
+                .mobile , .recent , .settings {
+                    grid-column : 2 / span 1 ;
+                    }
+    
+    
+                    .members-container {
+    
+    
+                        margin-top: 0;
+                    }
+    
+                    .members-container p {
+    
+                        margin-top: 0;
+                    }
+    
+                    p.arrow {
+    
+                        font-size: 20px;
+                        transform: scale(1.5);
+                    }
+    
+                    header {
+    
+    
+                        justify-content: space-between;
+                    }
+    
+                    header h1 {
+    
+                        margin-left: 2%;
+                    }
+    
+                    #notifications {
+    
+                        margin-right: 1%;
+                    }
+    
+                    section.settings {
+                         
+                   display: flex;
+                   flex-direction: column;
+    
+                    }
+    
+                    .settings-button {
+    
+                        margin-top: auto;
+                    }
+    
+                    #timezone {
+    
+                        margin-top:auto;
+                    }
+    
+                    .one {
+    
+                        position : absolute;
+                    
+                        top: 70px;
+                        /* margin-right: 20px; */
+                        
+                     }
+                     
+                     .two {
+                     
+                         position : absolute;
+                    
+                         top: 110px;
+                         /* margin-right: 20px; */
+                         
+                      }
+    
+                      .main-header-search {
+    
+                        width: 85%;
+                        padding-bottom: 35px;
+    
+    
+                      }
+    
+    
+                      input[type=search] {
+    
+                        width: 25%;
+                        /* margin-right:auto; */
+                        margin-left:auto;
+                        position: absolute;
+                        right:10px;
+                        height: 30px;
+    
+    
+    
+    
+    
+                      }
+    
+                      .notifications img {
+    
+                        /* display:block; */
+                        margin: 10px auto;
+                      }
+    
+    
+    
+                    .members {
+    
+                     border-top: 1px solid grey;
+                     border-right: 1px solid grey;
+    
+                    }
+    
+    
+                    .recent {
+    
+                        border-top:1px solid grey;
+    
+                    }
+    
+                    .message {
+    
+                        border-right: 1px solid grey;
+                        border-top: 1px solid grey;
+                    }
+                      
+    
+                    .settings {
+    
+    
+                        border-top: 1px solid grey;
+                    }
+    
+    
+                    .widget-container-full {
+                        width : 95vw ;
+                        }
+                        .widget-container-half {
+    
+                            width : 45vw ;
+                        }
+                     
+    
+                     .daily {
+    
+    
+                        border-top: 1px solid grey;
+                        border-right: 1px solid grey;
+                        border-bottom: 1px solid grey;
+                        margin-top:20px;
+                     }
+    
+    
+                     .mobile {
+    
+                        border-top: 1px solid grey;
+                        border-bottom: 1px solid grey;
+                        padding-bottom: 20px;
+                        margin-top:20px;
+                     }
+                      
+    
+                   
+        }
