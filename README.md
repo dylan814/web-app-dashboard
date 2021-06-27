@@ -23,4 +23,4 @@ This project involved:
 - CSS validated via the W3C CSS Validation Service.
 - JS checked via JS Hint and JS console in aforementioned browsers.
 
-Live page: https://dylan814.github.io/web-app-dasboard/
+Live page: https://dylan814.github.io/web-app-dashboard/
